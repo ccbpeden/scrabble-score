@@ -13,13 +13,16 @@
     $app = new Silex\Application();
     $app['debug']=true;
 
-    $app->register(new Silex\Provider\TwigServiceProvder(), array('twig.path' => __DIR__.'/../views'
+    $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'
     ));
 
     $app->get('/', function() use ($app) {
+        $new_scrabble = New Scrabble;
+        $new_scrabble->scoreCalculator("cheese");
+
         return $app['twig']->render('board.html.twig');
 
-    })
+    });
 
     return $app;
 ?>
