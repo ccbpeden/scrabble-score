@@ -18,7 +18,7 @@
 
     $app->get('/', function() use ($app) {
         $new_scrabble = New Scrabble;
-        $new_scrabble->scoreCalculator("cheese");
+        $output_score = $new_scrabble->scoreCalculator("cheese");
 
         return $app['twig']->render('board.html.twig');
 
