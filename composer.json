@@ -1,0 +1,8 @@
+{
+    "require":
+    {
+        "PHPUnit/PHPUnit": "4.5.*",
+        "Silex/Silex": "~1.1",
+        "Twig/Twig": "~1.0"
+    }
+}
