@@ -17,11 +17,16 @@
     ));
 
     $app->get('/', function() use ($app) {
-        $new_scrabble = New Scrabble;
-        $output_score = $new_scrabble->scoreCalculator("cheese");
 
         return $app['twig']->render('board.html.twig');
 
+    });
+
+    $app->post('/output', function() use ($app) {
+        $new_scrabble = New Scrabble;
+        $output_score = $new_scrabble->scoreCalculator($_POST['input_string']);
+
+        return $app['twig']->render('output.html.twig', array("score" => $output_score, "string"=>$_POST['input_string']));
     });
 
     return $app;
