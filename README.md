@@ -12,6 +12,14 @@
 | Behavior | Input Example | Output Example |
 |----------|---------------|----------------|
 |Given a word input, program outputs appropriate score|"Cake"|10|
+|Given a word input including a double word score, program outputs appropriate score|"Cake"|20|
+|Given a word input including a triple word score, program outputs appropriate score|"Cake"|30|
+|Given a word input including both a double and triple word score, program outputs appropriate score|"Cake"|60|
+|Given a word input including some number of double letter scores, program outputs appropriate score|"Cake" "double letter score position 2"|11|
+|Given a word input including some number of triple letter scores, program outputs appropriate score|"Cake" "triple letter score position 2"|12|
+|Given a word input including some number of double and triple letter scores, and/or double or triple word scores, program outputs appropriate score|"Cake" "double letter score position 2 and double word score"|22|
+|Given a starting position, direction, and word, program returns whether play is valid | "cake" "A1" "vertical" | "valid" |
+
 
 
 ## Setup/Installation Requirements
